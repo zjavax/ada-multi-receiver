@@ -42,6 +42,7 @@ public class BaseTest {
 //                new KoiosBackendService(KOIOS_TESTNET_URL);
         accountServiceImpl  = new AccountServiceImpl(Constants.BLOCKFROST_TESTNET_URL, blockfrostCardanoTestnetProjectId);
         assetServiceImpl    = new AssetServiceImpl(Constants.BLOCKFROST_TESTNET_URL, blockfrostCardanoTestnetProjectId);
+        EncryptedPropertyConfigurer.map.clear();
 
         feeCalculationService = backendService.getFeeCalculationService();
         transactionHelperService = backendService.getTransactionHelperService();
