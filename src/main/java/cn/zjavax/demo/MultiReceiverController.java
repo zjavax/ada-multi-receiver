@@ -1,16 +1,12 @@
 package cn.zjavax.demo;
 
-import com.bloxbean.cardano.client.backend.blockfrost.common.Constants;
 import com.bloxbean.cardano.client.common.ADAConversionUtil;
 import com.bloxbean.cardano.client.function.Output;
 import com.bloxbean.cardano.client.function.TxBuilder;
 import com.bloxbean.cardano.client.function.TxBuilderContext;
 import com.bloxbean.cardano.client.function.TxOutputBuilder;
 import com.bloxbean.cardano.client.transaction.spec.Transaction;
-import io.blockfrost.sdk.impl.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,6 +19,12 @@ import static com.bloxbean.cardano.client.function.helper.ChangeOutputAdjustment
 import static com.bloxbean.cardano.client.function.helper.FeeCalculators.feeCalculator;
 import static com.bloxbean.cardano.client.function.helper.InputBuilders.createFromSender;
 
+/**
+ * 一对多发送ada和资产
+ *
+ * @author <zjavax>
+ * @since <pre>06/17/2022</pre>
+ */
 @RestController
 public class MultiReceiverController extends BaseTest {
 
