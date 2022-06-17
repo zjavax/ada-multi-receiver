@@ -31,7 +31,8 @@ public class MultiReceiverController {
     @Autowired
     private BaseTest baseTest;
 
-//    127.0.0.1:8080/buildTx/addr_test1qqxnp3khzm7kcj9t23hskehat7428ghsenk0pfew4rqy5v9frnmht7uwrl073q4jvq20z82kh4rksyns540azhndqexqpvhgqr
+    //        String senderMnemonic = "kit color frog trick speak employ suit sort bomb goddess jewel primary spoil fade person useless measure manage warfare reduce few scrub beyond era";
+    //    127.0.0.1:8080/buildTx/addr_test1qqxnp3khzm7kcj9t23hskehat7428ghsenk0pfew4rqy5v9frnmht7uwrl073q4jvq20z82kh4rksyns540azhndqexqpvhgqr
 //    [ {
 //        "receiverAddress" : "addr_test1qq4pxvsevncnfd7ppmatyavej7kjcukwxugrnk9rsejufvpfqqgflwz7ahhqezd8mx5hfxmwh2stfagm8uwkxreya6rsqfxnz7",
 //                "policyId" : "75d01e750b6e4986f4d26f92d70c70a9d337e834faebcc177a7e796a",
