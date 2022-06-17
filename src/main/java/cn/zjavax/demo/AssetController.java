@@ -5,6 +5,7 @@ import cn.zjavax.demo.cardano.asset.AssetServiceProcess;
 import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,14 +13,17 @@ import java.util.HashMap;
 
 
 @RestController
-public class AssetController extends BaseTest{
+public class AssetController {
+
+    @Autowired
+    private AssetServiceProcess assetServiceProcess;
 
     @ResponseBody
     @RequestMapping(value="/assets/{stackAddress}", method = RequestMethod.GET)
     public  ArrayList queryAsset(@PathVariable String stackAddress)  {
         // 直接将json信息打印出来
         System.out.println("stackAddress:"+stackAddress);
-        return new AssetServiceProcess().getAssetList(stackAddress);
+        return assetServiceProcess.getAssetList(stackAddress);
     }
 
 
@@ -40,7 +44,7 @@ public class AssetController extends BaseTest{
 
             map = mapper.readValue(jsonParam.toJSONString(), HashMap.class);
             System.out.println(map);
-            listB = new  AssetServiceProcess().getAssetDecimalListByAssets(map);
+            listB = assetServiceProcess.getAssetDecimalListByAssets(map);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

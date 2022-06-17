@@ -11,7 +11,9 @@ import com.bloxbean.cardano.client.backend.blockfrost.common.Constants;
 import com.bloxbean.cardano.client.backend.blockfrost.service.BFBackendService;
 import io.blockfrost.sdk.impl.AccountServiceImpl;
 import io.blockfrost.sdk.impl.AssetServiceImpl;
+import org.springframework.stereotype.Component;
 
+@Component
 public class BaseTest {
 
     protected BackendService backendService;

@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Component
-public class AssetServiceProcess extends BaseTest{
+public class AssetServiceProcess {
 
     @Autowired
     private BaseTest baseTest;
@@ -75,7 +75,7 @@ public class AssetServiceProcess extends BaseTest{
     {
         ArrayList<AssetBean>  listB = new ArrayList<AssetBean>();
         try {
-            List<AccountAsset> list = accountServiceImpl.getAccountAssets(stack_address,30,1);
+            List<AccountAsset> list = baseTest.accountServiceImpl.getAccountAssets(stack_address,30,1);
 
             for(AccountAsset asset : list)
             {

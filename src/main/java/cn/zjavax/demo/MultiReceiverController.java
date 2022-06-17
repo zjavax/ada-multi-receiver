@@ -26,11 +26,10 @@ import static com.bloxbean.cardano.client.function.helper.InputBuilders.createFr
  * @since <pre>06/17/2022</pre>
  */
 @RestController
-public class MultiReceiverController extends BaseTest {
+public class MultiReceiverController {
 
     @Autowired
     private BaseTest baseTest;
-
 
     @PostMapping("/buildTx/{senderAddress}")
     public String buildTx(@PathVariable String senderAddress, @RequestBody List<TransferAsset> transferAssetList) throws Exception{
