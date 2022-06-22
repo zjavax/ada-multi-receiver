@@ -11,12 +11,13 @@ public class HomeController {
     @RequestMapping("/")
     public String viewHome() {
 
-        Environment bean = PropertiesConfiguration.applicationContext.getBean(Environment.class);
-        String property = bean.getProperty("blockfrost.cardano.testnet.project.id");
-
-
-
-        System.out.println(property+ "123");
-        return "index";
+//        Environment bean = PropertiesConfiguration.applicationContext.getBean(Environment.class);
+//        String property = bean.getProperty("blockfrost.cardano.testnet.project.id");
+//
+//
+//
+//        System.out.println(property+ "123");
+        System.out.println("123");
+        return "123";
     }
 }
